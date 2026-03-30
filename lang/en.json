@@ -1,0 +1,21 @@
+{
+    "subtitle": "Anonymous instant email. Stop spam.",
+    "generating": "generating...",
+    "copyBtnTitle": "Copy Email",
+    "refreshBtnTitle": "Force Refresh",
+    "qrBtnTitle": "View QR Code",
+    "inboxTitle": "Inbox",
+    "liveSyncTitle": "Real-time sync",
+    "liveTitle": "Live",
+    "waitingEmails": "Waiting for incoming emails...",
+    "autoUpdateTip": "Your inbox will update automatically",
+    "scanQrTitle": "Scan your QR code",
+    "scanQrDesc": "Use your mobile to send an email to this address.",
+    "closeBtn": "Close",
+    "copyToastMsg": "Copied to clipboard ✓",
+    "loadingEmails": "Loading message...",
+    "noSender": "Unknown Sender",
+    "noSubject": "No Subject",
+    "backBtn": "Back to inbox",
+    "errorGen": "Error generating email. Reloading..."
+}

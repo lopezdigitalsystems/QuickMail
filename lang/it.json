@@ -1,0 +1,21 @@
+{
+    "subtitle": "Email anonima istantanea. Ferma lo spam.",
+    "generating": "generazione...",
+    "copyBtnTitle": "Copia Email",
+    "refreshBtnTitle": "Forza Aggiornamento",
+    "qrBtnTitle": "Visualizza QR Code",
+    "inboxTitle": "Posta in Arrivo",
+    "liveSyncTitle": "Sincronizzazione in tempo reale",
+    "liveTitle": "Live",
+    "waitingEmails": "In attesa di email in arrivo...",
+    "autoUpdateTip": "La tua casella si aggiornerà automaticamente",
+    "scanQrTitle": "Scansiona il tuo codice QR",
+    "scanQrDesc": "Usa il tuo cellulare per inviare un'email a questo indirizzo.",
+    "closeBtn": "Chiudi",
+    "copyToastMsg": "Copiato negli appunti ✓",
+    "loadingEmails": "Caricamento messaggio...",
+    "noSender": "Mittente Sconosciuto",
+    "noSubject": "Nessun Oggetto",
+    "backBtn": "Torna alla posta in arrivo",
+    "errorGen": "Errore nella generazione dell'email. Ricaricamento..."
+}

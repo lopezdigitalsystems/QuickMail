@@ -1,0 +1,21 @@
+{
+    "subtitle": "E-mail anonyme instantané. Stoppez le spam.",
+    "generating": "génération...",
+    "copyBtnTitle": "Copier l'e-mail",
+    "refreshBtnTitle": "Forcer l'actualisation",
+    "qrBtnTitle": "Voir le code QR",
+    "inboxTitle": "Boîte de réception",
+    "liveSyncTitle": "Synchronisation en temps réel",
+    "liveTitle": "Live",
+    "waitingEmails": "En attente d'e-mails entrants...",
+    "autoUpdateTip": "Votre boîte de réception sera mise à jour automatiquement",
+    "scanQrTitle": "Scannez votre code QR",
+    "scanQrDesc": "Utilisez votre mobile pour envoyer un e-mail à cette adresse.",
+    "closeBtn": "Fermer",
+    "copyToastMsg": "Copié dans le presse-papiers ✓",
+    "loadingEmails": "Chargement des e-mails...",
+    "noSender": "Expéditeur inconnu",
+    "noSubject": "Sans objet",
+    "backBtn": "Retour à la boîte de réception",
+    "errorGen": "Erreur lors de la génération. Rechargement..."
+}

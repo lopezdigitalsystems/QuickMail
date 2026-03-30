@@ -1,0 +1,566 @@
+/* Variables base inspiradas en Obsidian Prism (Stitch) */
+:root {
+    --bg-void: #060E20;
+    --surface-container-low: #091328;
+    --surface-container: #0F1930;
+    --surface-container-high: #141F38;
+    --surface-container-highest: #192540;
+    --primary-indigo: #6366F1;
+    --primary-dim: #4F46E5;
+    --on-surface: #DEE5FF;
+    --on-surface-variant: #A3AAC4;
+    --outline-variant: rgba(64, 72, 93, 0.4);
+    
+    --font-display: 'Manrope', sans-serif;
+    --font-ui: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-void);
+    color: var(--on-surface);
+    font-family: var(--font-ui);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efecto fondo sutil con gradiente */
+.background-gradient {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(99, 102, 241, 0.08) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.app-header {
+    text-align: center;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(135deg, #fff 20%, var(--primary-indigo));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    color: var(--on-surface-variant);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+    background: rgba(25, 37, 64, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--outline-variant);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.timer-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-indigo);
+    letter-spacing: -2px;
+}
+
+.icon-pulse {
+    animation: pulse 2s infinite;
+    width: 36px;
+    height: 36px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.email-display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 480px) {
+    .email-display {
+        flex-direction: row;
+    }
+}
+
+.email-display input {
+    flex-grow: 1;
+    background: var(--surface-container-high);
+    border: 1px solid var(--outline-variant);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    color: var(--on-surface);
+    font-family: var(--font-ui);
+    font-size: 1.15rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.email-display input:focus {
+    border-color: var(--primary-indigo);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.btn-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    background: var(--surface-container-high);
+    border: 1px solid var(--outline-variant);
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-icon:hover {
+    background: var(--primary-indigo);
+    color: white;
+    border-color: var(--primary-indigo);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-icon:active {
+    transform: translateY(1px);
+}
+
+/* Bandeja de entrada */
+.inbox-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid var(--outline-variant);
+    padding-bottom: 1rem;
+}
+
+.inbox-header h2 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--on-surface);
+}
+
+.loader-pulse {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-indigo);
+    animation: blink 1.5s infinite;
+    box-shadow: 0 0 10px var(--primary-indigo);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.inbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.empty-state {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--on-surface-variant);
+    background: var(--surface-container-low);
+    border: 1px dashed var(--outline-variant);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.icon-large {
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+}
+
+.empty-state small {
+    opacity: 0.7;
+    font-size: 0.85rem;
+}
+
+.email-item {
+    background: var(--surface-container-low);
+    border: 1px solid transparent;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.email-item:hover {
+    background: var(--surface-container-high);
+    border-color: var(--outline-variant);
+    transform: translateX(4px);
+}
+
+.email-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--primary-indigo);
+    font-weight: 600;
+}
+
+.email-item-subject {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin: 0.25rem 0;
+    color: white;
+}
+
+.email-item-snippet {
+    color: var(--on-surface-variant);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Modales */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal.visible .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+}
+
+.modal-content p {
+    color: var(--on-surface-variant);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+#qrImage {
+    border-radius: 1rem;
+    border: 8px solid white;
+    width: 250px;
+    height: 250px;
+    background: white;
+}
+
+.btn-primary {
+    background: var(--primary-indigo);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dim);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Feature Updates */
+.timer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 240px;
+    height: 4px;
+    background: var(--surface-container-high);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-dim), var(--primary-indigo));
+    border-radius: 2px;
+    width: 100%;
+    transition: width 1s linear, background 0.3s ease;
+}
+
+.btn-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.global-toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--surface-container-highest);
+    color: var(--primary-indigo);
+    border: 1px solid var(--primary-dim);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 2000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.global-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #10b981;
+    animation: livePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.2); }
+}
+
+/* Feature Updates - Language Selector Bottom */
+.lang-selector-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .lang-selector-bottom {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        margin-top: 0;
+        padding-bottom: 0;
+        z-index: 1000;
+    }
+}
+
+.glass-panel-small {
+    background: rgba(25, 37, 64, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--outline-variant);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--on-surface);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.glass-panel-small option {
+    background: var(--surface-container-highest);
+    color: var(--on-surface);
+}
+
+/* Email Viewer Styles */
+.email-viewer {
+    background: var(--surface-container-low);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: slideIn 0.4s ease forwards;
+}
+
+.email-viewer.hidden {
+    display: none;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--primary-indigo);
+    font-weight: 600;
+    font-family: var(--font-ui);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+    width: fit-content;
+}
+
+.btn-back:hover {
+    color: var(--on-surface);
+    transform: translateX(-4px);
+}
+
+.email-viewer-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--outline-variant);
+    padding-bottom: 1.5rem;
+}
+
+.email-viewer-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0;
+    color: white;
+}
+
+.email-viewer-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--on-surface-variant);
+    font-size: 0.9rem;
+}
+
+.email-viewer-body {
+    color: var(--on-surface);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+.email-viewer-body iframe {
+    width: 100%;
+    border: none;
+    min-height: 400px;
+    background: white;
+    border-radius: 0.5rem;
+}

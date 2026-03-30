@@ -1,0 +1,21 @@
+{
+    "subtitle": "Anonyme Sofort-E-Mail. Stoppen Sie Spam.",
+    "generating": "generiere...",
+    "copyBtnTitle": "E-Mail kopieren",
+    "refreshBtnTitle": "Aktualisierung erzwingen",
+    "qrBtnTitle": "QR-Code anzeigen",
+    "inboxTitle": "Posteingang",
+    "liveSyncTitle": "Echtzeit-Synchronisation",
+    "liveTitle": "Live",
+    "waitingEmails": "Warten auf eingehende E-Mails...",
+    "autoUpdateTip": "Ihr Posteingang wird automatisch aktualisiert",
+    "scanQrTitle": "Scannen Sie Ihren QR-Code",
+    "scanQrDesc": "Senden Sie mit Ihrem Handy eine E-Mail an diese Adresse.",
+    "closeBtn": "Schließen",
+    "copyToastMsg": "In die Zwischenablage kopiert ✓",
+    "loadingEmails": "Laden der Nachrichten...",
+    "noSender": "Unbekannter Absender",
+    "noSubject": "Kein Betreff",
+    "backBtn": "Zurück zum Posteingang",
+    "errorGen": "Fehler beim Generieren. Neuladen..."
+}

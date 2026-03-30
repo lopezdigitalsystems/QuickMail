@@ -1,0 +1,21 @@
+{
+    "subtitle": "Correo anónimo instantáneo. Elimina el spam.",
+    "generating": "generando...",
+    "copyBtnTitle": "Copiar Correo",
+    "refreshBtnTitle": "Forzar Refresco",
+    "qrBtnTitle": "Ver Código QR",
+    "inboxTitle": "Bandeja de Entrada",
+    "liveSyncTitle": "Sincronización en tiempo real",
+    "liveTitle": "Live",
+    "waitingEmails": "Esperando correos entrantes...",
+    "autoUpdateTip": "Tu bandeja se actualizará automáticamente",
+    "scanQrTitle": "Escanea tu código QR",
+    "scanQrDesc": "Usa tu móvil para enviar un correo a esta dirección.",
+    "closeBtn": "Cerrar",
+    "copyToastMsg": "Copiado al portapapeles ✓",
+    "loadingEmails": "Cargando mensaje...",
+    "noSender": "Remitente Desconocido",
+    "noSubject": "Sin Asunto",
+    "backBtn": "Volver a la bandeja",
+    "errorGen": "Error al generar correo. Recargando..."
+}
