@@ -119,5 +119,128 @@
 
     <!-- Script Principal -->
     <script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickMail - Correo Temporal</title>
+    <meta name="description" content="Servicio de correo temporal rápido, seguro y anónimo.">
+    <!-- Favicon desde /assets -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <!-- Precarga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Estilos Core -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <main class="container">
+
+        <header class="app-header">
+            <h1 class="logo">QuickMail</h1>
+            <p class="subtitle" data-i18n="subtitle">Correo anónimo instantáneo. Elimina el spam.</p>
+        </header>
+
+        <section class="hero-card glass-panel">
+            <div class="timer-section">
+                <div class="timer-container">
+                    <i data-lucide="clock" class="icon-pulse"></i>
+                    <span id="countdown">15:00</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="timerProgress"></div>
+                </div>
+            </div>
+            
+            <div class="email-display">
+                <input type="text" id="emailAddress" readonly value="generando..." data-i18n-placeholder="generating">
+                <div class="action-buttons">
+                    <div class="btn-wrap">
+                        <button id="copyBtn" class="btn-icon" title="Copiar Correo" data-i18n-title="copyBtnTitle">
+                            <i data-lucide="copy"></i>
+                        </button>
+                    </div>
+                    <button id="refreshBtn" class="btn-icon" title="Forzar Refresco" data-i18n-title="refreshBtnTitle">
+                        <i data-lucide="refresh-cw"></i>
+                    </button>
+                    <button id="qrBtn" class="btn-icon" title="Ver Código QR" data-i18n-title="qrBtnTitle">
+                        <i data-lucide="qr-code"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="inbox-section">
+            <div class="inbox-header">
+                <h2 data-i18n="inboxTitle">Bandeja de Entrada</h2>
+                <div class="live-indicator" title="Sincronización en tiempo real" data-i18n-title="liveSyncTitle">
+                    <div class="pulse-dot"></div>
+                    <span data-i18n="liveTitle">Live</span>
+                </div>
+            </div>
+            
+            <div class="inbox-list" id="inboxList">
+                <div class="empty-state" id="emptyState">
+                    <i data-lucide="inbox" class="icon-large"></i>
+                    <p data-i18n="waitingEmails">Esperando correos entrantes...</p>
+                    <small data-i18n="autoUpdateTip">Tu bandeja se actualizará automáticamente</small>
+                </div>
+            </div>
+
+            <!-- Visor de correo individual -->
+            <div class="email-viewer hidden" id="emailViewer">
+                <button class="btn-back" id="backToInboxBtn">
+                    <i data-lucide="arrow-left"></i> <span data-i18n="backBtn">Volver a la bandeja</span>
+                </button>
+                <div class="email-viewer-header">
+                    <h3 id="viewerSubject">Asunto del correo</h3>
+                    <div class="email-viewer-meta">
+                        <span id="viewerFrom">remitente@ejemplo.com</span>
+                        <span id="viewerDate">10:45 AM</span>
+                    </div>
+                </div>
+                <div class="email-viewer-body" id="viewerBody">
+                    <!-- Contenido del correo renderizado de forma segura -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para Código QR -->
+        <div id="qrModal" class="modal hidden">
+            <div class="modal-content glass-panel">
+                <h3 data-i18n="scanQrTitle">Escanea tu código QR</h3>
+                <p data-i18n="scanQrDesc">Usa tu móvil para enviar un correo a esta dirección.</p>
+                <div id="qrCodeContainer">
+                    <img id="qrImage" src="" alt="Código QR en carga" />
+                </div>
+                <button id="closeQrBtn" class="btn-primary" data-i18n="closeBtn">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Language Selector Bottom Right -->
+        <div class="lang-selector-bottom">
+            <select class="language-select glass-panel-small" id="languageSelect">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+
+    </main>
+
+    <!-- Toast Global -->
+    <div id="copyToast" class="global-toast" data-i18n="copyToastMsg">Copiado al portapapeles ✓</div>
+
+    <!-- Script Principal -->
+    <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
